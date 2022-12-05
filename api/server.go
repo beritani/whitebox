@@ -108,7 +108,7 @@ func handleRequests() {
 func Start() {
 	envHost = getEnv("API_HOST", "0.0.0.0")
 	envPort = getEnv("API_PORT", "8080")
-	envData = getEnv("DATA_PATH", "./data")
+	envData = getEnv("DATA_PATH", "/data")
 	size, err := strconv.ParseInt(getEnv("SIZE", "1048576"), 10, 0)
 	if err != nil || size <= 0 {
 		log.Fatal("SIZE must be a number greater than 0")
